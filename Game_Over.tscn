@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b66wrpirp1osi"]
+
+[ext_resource type="Script" uid="uid://cwdemhaxonvyu" path="res://game_over.gd" id="1_0ghu6"]
+
+[node name="GameOver" type="Control" unique_id=1899661169]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ghu6")
+
+[node name="Background" type="ColorRect" parent="." unique_id=327335110]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2110612259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1226982243]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1356830078]
+modulate = Color(0.46532065, 0.36520946, 0.4269946, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+theme_override_font_sizes/font_size = 64
+text = "GAME OVERRRR
+"
+horizontal_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2048582645]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+text = "Replay
+"
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1621600830]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+text = "Go Back
+
+
+"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

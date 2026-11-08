@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GameJam 2026"
-run/main_scene="uid://dyt4rhfy3hueu"
+run/main_scene="uid://b66wrpirp1osi"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
