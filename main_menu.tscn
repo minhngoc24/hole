@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://8gtpch2p3nj2"]
+
+[ext_resource type="Script" uid="uid://bwwd3g0bmyll4" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Control" unique_id=2141840895]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="Background" type="ColorRect" parent="." unique_id=14418428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=363140132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1849088768]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1894524272]
+modulate = Color(0.46532065, 0.36520946, 0.4269946, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+theme_override_font_sizes/font_size = 64
+text = "HOLE IN THE WALL
+"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=112821832]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+text = "Start Game"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1473791171]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+text = "Settings
+"
+
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1653716095]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+text = "Credits
+
+"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=710701308]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+text = "Quit Game
+
+
+"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
